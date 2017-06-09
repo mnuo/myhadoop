@@ -24,7 +24,7 @@ public class JedisDemo {
 		Jedis jedis = null;
 		try {
 			jedis = JedisPoolManager.getInstance().getResource();
-			jedis.auth("123123");
+			//jedis.auth("123123");
 			
 			//simple key - value
 			jedis.set("redis", "myredis");
