@@ -7,6 +7,7 @@
 <body>
 	 <h2>请输入您的用户名与密码</h2>  
     <form name='f' action='${pageContext.request.contextPath }/login' method='POST'>
+    	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
         <table>
             <tr>
                 <td>用户:</td>
@@ -16,6 +17,11 @@
                 <td>密码:</td>
                 <td><input type='password' name='password' /></td>
             </tr>
+            <tr>
+			    <td colspan='2'>
+			        <input id="remember-me" name="remember-me" type="checkbox" checked="checked"/>自动登录
+			    </td>
+			</tr>
             <tr>
                 <td colspan='2'><input name="submit" type="submit"
                     value="登录" /></td>
